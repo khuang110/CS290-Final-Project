@@ -1,0 +1,40 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Drawing site</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./index.js" charset="utf-8" defer></script>
+
+</head>
+
+<body class="drawing-canvas" onload="init()">
+    <header>
+        <h1 class="site-title">Drawing Site</h1>
+        <nav class="navbar">
+            <ul class="navlist">
+                <li class="navitem">
+                    <input type="button" value="save" id="btn" onclick="save()">
+                </li>
+                <li class="navitem">
+                    <input type="button" value="clear" id="clr" onclick="erase()">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <canvas id="can" width="400" height="400"></canvas>
+    <nav class="Colorlist">
+        <div>Choose Color</div>
+        <div class="color" id="green" onclick="color(this)"></div>
+        <div class="color" id="blue" onclick="color(this)"></div>
+        <div class="color" id="red" onclick="color(this)"></div>
+        <div class="color" id="yellow" onclick="color(this)"></div>
+        <div class="color" id="orange" onclick="color(this)"></div>
+        <div class="color" id="pink" onclick="color(this)"></div>
+        <div class="color" id="black" onclick="color(this)"></div>
+        <div>Eraser</div>
+        <div class="color" id="white" onclick="color(this)"></div>
+    </nav>
+    <img id="canvas-img">
+</body>

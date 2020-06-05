@@ -1,0 +1,114 @@
+.site-title {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: 100;
+    background-color: #319df6;
+    color: #fff;
+}
+
+body {
+    margin: 10px;
+    padding: 0;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.navbar {
+    background-color: gray;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.Colorlist {
+    background-color: gray;
+    font-size: 18px;
+}
+
+.navlist {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.navitem {
+    display: inline-block;
+}
+
+#btn {
+    float: right;
+    margin-right: 20px;
+    padding: 0;
+    line-height: 38px;
+}
+
+#clr {
+    float: right;
+    margin-right: 20px;
+    padding: 0;
+    line-height: 38px;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    flex: 0 1 28%;
+    display: inline-flex;
+    margin: 2px;
+    padding: 20px;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.Colorlist {
+    display: inline-block;
+}
+
+.color:hover {
+    cursor: pointer;
+}
+
+#red {
+    background: red;
+}
+
+#blue {
+    background: blue;
+}
+
+#black {
+    background: black;
+}
+
+#green {
+    background: green;
+}
+
+#yellow {
+    background: yellow;
+}
+
+#orange {
+    background: orange;
+}
+
+#pink {
+    background: pink;
+}
+
+#color {
+    background: white;
+}
+
+#can {
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+#canvas-img {
+    border: 2px solid black;
+}
+
+#can:hover {
+    cursor: pointer;
+}
