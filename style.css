@@ -23,16 +23,37 @@ body {
   margin: 10px;
   padding: 10px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   border: 1px solid black;
 }
 
 .color-picker {
+  background-color: #eee;
   padding: 5px;
-  margin-right: 100px;
+  margin: 10px;
   border: 1px dashed black;
 }
 
+.color-input {
+  background-color: #eee;
+}
+
+.add-color-button {
+  width: 150px;
+  height:75px;
+  background-color: #f5f2d7;
+  margin: 15px;
+}
+
+.add-color-button:hover{
+  background-color: #ede3be
+}
+
 .modal-accept-button {
+  width: 150px;
+  height:75px;
+  margin:15px;
   background-color: #319df6;
   color: #fff;
 }

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>Color Combiner</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="combiner.js" charset="utf-8"></script>
+    <script src="combiner.js" charset="utf-8" defer></script>
 
 </head>
 
@@ -18,16 +18,18 @@
         </nav>
     </header>
 
+    <h3>Enter some colors in Hexadecimal! The '#' is already provided. </h3>
+
     <div class = "container">
-    <div class = "color-picker" id = "cp1">
-      <p>Enter a hex color code:</p>
-      <input type = "text" class = "color-input" id = "input1">
+    <div class = "color-picker">
+      <p>Enter a color code:</p>
+      <label for="color-input">#</label>
+      <input type = "text" class = "color-input">
     </div>
-    <div class = "color-picker" id = "cp2">
-      <p>Enter a hex color code:</p>
-      <input type = "text" class = "color-input" id = "input2">
-    </div>
-    <button type="button" class="modal-accept-button">Combine Colors</button>
+
+    <button type="button" class = "add-color-button">Add another color</button>
+
+    <button type="button" class="modal-accept-button">See Result of Chosen Colors</button>
     </div>
 
 </body>
