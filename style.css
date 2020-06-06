@@ -42,12 +42,23 @@ body {
 .add-color-button {
   width: 150px;
   height:75px;
-  background-color: #f5f2d7;
+  background-color: #88ff88;
   margin: 15px;
 }
 
 .add-color-button:hover{
-  background-color: #ede3be
+  background-color: #44ff33;
+}
+
+.remove-color-button {
+  width: 150px;
+  height:75px;
+  background-color: #ff7a7a;
+  margin: 15px;
+}
+
+.remove-color-button:hover{
+  background-color: #ff5555;
 }
 
 .modal-accept-button {

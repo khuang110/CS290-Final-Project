@@ -4,10 +4,15 @@ inputs[0].addEventListener("keyup", updateColor);
 var addColorButton = document.getElementsByClassName("add-color-button");
 addColorButton[0].addEventListener("click", addColor);
 
-var colorParams = 1;
+var removeColorButton = document.getElementsByClassName("remove-color-button");
+removeColorButton[0].addEventListener("click", removeColor);
 
 var calculateButton = document.getElementsByClassName("modal-accept-button");
 calculateButton[0].addEventListener("click", displayResult);
+
+var colorParams = 1;
+var resultFound = false;
+
 
 function updateColor()
 {
@@ -43,22 +48,68 @@ function addColor()
 
 }
 
+function removeColor()
+{
+  if(colorParams < 1){window.alert("There are no more colors ot remove");}
+  else
+  {
+      var removeMe = document.getElementsByClassName("color-picker")[(colorParams-1)];
+      removeMe.parentNode.removeChild(removeMe);
+      colorParams--;
+  }
+}
+
 function displayResult()
 {
-  var newColor = calculateResult();
+  var errorFlag = false;
+  var colorArguments = document.getElementsByClassName("color-input");
+  for(var i = 0;  i < colorParams; i++)
+  {
+    if(colorArguments[i].value.length != 6){errorFlag = true;}
+    for(var j = 0; j < colorArguments[i].value.length; j++)
+    {
+      if(illegalChar(colorArguments[i].value.charAt(j))) {errorFlag = true;}
+    }
+  }
+  if(colorParams == 0){errorFlag = true;}
 
-  var newP = document.createElement("p");
-  newP.appendChild(document.createTextNode("Here's the new Color! "));
-  newP.appendChild(document.createTextNode(newColor));
+  if(errorFlag == true) {window.alert("One of your color code inputs is illegal. Try Again");}
+  else
+  {
+    var newColor = calculateResult();
+    if(resultFound == true)
+    {
+      var newD = document.getElementById("result");
+      newD.style.backgroundColor = newColor;
+      newD.childNodes[0].childNodes[1].parentNode.removeChild(newD.childNodes[0].childNodes[1]);
+      newD.childNodes[0].appendChild(document.createTextNode(newColor));
+    }
+    else
+    {
+      resultFound = true;
+      var newP = document.createElement("p");
+      newP.appendChild(document.createTextNode("Here's the new Color! "));
+      newP.appendChild(document.createTextNode(newColor));
 
-  var newD = document.createElement("div");
-  newD.classList.add("color-picker");
-  newD.appendChild(newP);
+      var newD = document.createElement("div");
+      newD.classList.add("color-picker");
+      newD.id = "result";
+      newD.appendChild(newP);
 
-  newD.style.backgroundColor = newColor;
+      newD.style.backgroundColor = newColor;
 
-  var colorContainer = document.body.childNodes[5];
-  colorContainer.appendChild(newD, colorContainer.childNodes[colorParams+1]);}
+      var colorContainer = document.body.childNodes[5];
+      colorContainer.appendChild(newD, colorContainer.childNodes[colorParams+1]);
+    }
+  }
+}
+
+function illegalChar(testMe)
+{
+  if(testMe.charCodeAt(0) < 58 && testMe.charCodeAt(0) > 47) {return false;}
+  else if (testMe.charCodeAt(0) < 103 && testMe.charCodeAt(0) > 96) {return false;}
+  else{return true;}
+}
 
 function calculateResult()
 {
