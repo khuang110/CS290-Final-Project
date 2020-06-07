@@ -19,9 +19,9 @@ function updateColor()
   var input = '#';
   input = input.concat(event.target.value);
 
-  event.target.style.backgroundColor = (input);
+  event.target.parentNode.style.backgroundColor = (input);
 
-  if(input == '#'){event.target.style.backgroundColor = ("#eee");}
+  if(input == '#'){event.target.parentNode.style.backgroundColor = ("#fafafa");}
 }
 
 function addColor()

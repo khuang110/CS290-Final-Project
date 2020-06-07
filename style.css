@@ -29,14 +29,14 @@ body {
 }
 
 .color-picker {
-  background-color: #eee;
+  background-color: #fafafa;
   padding: 5px;
   margin: 10px;
   border: 1px dashed black;
 }
 
 .color-input {
-  background-color: #eee;
+  background-color: #fafafa;
 }
 
 .add-color-button {
