@@ -17,11 +17,14 @@ body {
     background-color: gray;
     font-size: 18px;
     line-height: 22px;
+    float: right;
+    align-items: bottom;
 }
 
 .Colorlist {
     background-color: gray;
     font-size: 18px;
+    float: right;
 }
 
 .navlist {
@@ -31,6 +34,27 @@ body {
 
 .navitem {
     display: inline-block;
+}
+
+#radiusControl {
+    width: 100%;
+    padding: 5px;
+    float: right;
+    color: red;
+    /* Dont allow user to highlight the + and - */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.radCont {
+    width: 20px;
+    height: 20px;
+    background-color: #3f3f3f;
+    display: inline-block;
+    text-align: center;
+    padding: 1px;
 }
 
 #btn {
@@ -51,12 +75,16 @@ body {
     width: 20px;
     height: 20px;
     flex: 0 1 28%;
-    display: inline-flex;
+    display: flex;
     margin: 2px;
     padding: 20px;
     border: 1px solid #dadada;
-    border-radius: 2px;
+    border-radius: 33px;
     background-color: #fff;
+}
+
+.color.active {
+    border: 2px solid white;
 }
 
 .Colorlist {
@@ -67,42 +95,16 @@ body {
     cursor: pointer;
 }
 
-#red {
-    background: red;
-}
-
-#blue {
-    background: blue;
-}
-
-#black {
-    background: black;
-}
-
-#green {
-    background: green;
-}
-
-#yellow {
-    background: yellow;
-}
-
-#orange {
-    background: orange;
-}
-
-#pink {
-    background: pink;
-}
-
 #color {
     background: white;
 }
 
 #can {
     border: 2px solid black;
-    width: 400px;
-    height: 400px;
+    position: absolute;
+    color: #fff;
+    overflow: hidden;
+    background-color: transparent;
 }
 
 #canvas-img {
@@ -111,4 +113,9 @@ body {
 
 #can:hover {
     cursor: pointer;
+}
+
+select {
+    font-size: 12px;
+    background-color: #fff;
 }
