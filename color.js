@@ -1,7 +1,7 @@
 /*
  *   Change colors
  */
-var colors = ['black', 'pink', 'orange', 'red', 'yellow',
+var colors = ['white', 'black', 'pink', 'orange', 'red', 'yellow',
     'gray', 'violet', 'green', 'blue'
 ];
 
@@ -27,7 +27,8 @@ function se(col) {
 
 // set color
 function setColor(e) {
-    var color = e.target;;
+    var color = e.target;
     se(color.style.backgroundColor);
-    color.className += ' active';
+    color.clssName += ' active';
+
 }

@@ -1,7 +1,7 @@
 /*
  *   save image as a png
  */
-var saveBut = document.getElementById('btn');
+var saveBut = document.getElementById('download');
 
 saveBut.addEventListener('click', saveImage);
 
@@ -16,12 +16,16 @@ function saveImage() {
         if (req.readyState == 4 && req.status == 200) {
             var res = req.responseText;
             window.open(data, '_blank', 'location=0, menubar=0');
+            console.log(res);
         }
     }
 
-    // send data
+
+    // //send data
     req.open('POST', 'img.php', true);
-    req.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+    req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     req.send('img=' + data);
+
+    console.log("afeter");
 
 }

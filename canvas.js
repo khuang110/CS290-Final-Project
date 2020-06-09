@@ -9,9 +9,15 @@ var radius = 10,
     dragging = false; // is mouse button held down
 
 canvas.width = window.innerWidth / 2;
-canvas.height = window.innerWidth / 2;
+canvas.height = window.innerHeight / 2;
 
 context.lineWidth = radius * 2;
+
+window.onresize = function() {
+    context.getImageData(0, 0, canvas.width, canvas.height);
+    canvas.width = window.innerWidth / 2;
+    canvas.height = window.innerHeight / 2;
+}
 
 var putPoint = function(e) {
     if (dragging) {
