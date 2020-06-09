@@ -1,20 +1,63 @@
+body {
+    background-color: black;
+}
+
 .site-title {
-    margin: 0;
+    margin: 0 auto;
     padding: 10px 20px;
-    font-size: 30px;
-    font-weight: 100;
-    background-color: #319df6;
-    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-style: double;
+    border-width: 15px;
+
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
 }
 
 body {
     margin: 10px;
     padding: 0;
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Lucida Console', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    color: white
 }
 
 .navbar {
-    background-color: gray;
     font-size: 18px;
     line-height: 22px;
+    border: solid;
+
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+}
+
+.navlist {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.navitem {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: dodgerblue;
 }
