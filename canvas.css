@@ -3,28 +3,40 @@
     padding: 10px 20px;
     font-size: 30px;
     font-weight: 100;
-    background-color: #319df6;
-    color: #fff;
+    background-color: black;
+    color: white;
+
+    border-style: double;
+    border-width: 10px;
+
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
 }
 
 body {
     margin: 10px;
     padding: 0;
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Lucida Console', Courier, monospace;
 }
 
+h1 {
+    text-align: center;
+}
 .navbar {
     background-color: gray;
     font-size: 18px;
     line-height: 22px;
-    float: right;
+    position: relative;
     align-items: bottom;
+
 }
 
 .Colorlist {
     background-color: gray;
     font-size: 18px;
-    float: right;
+    position: relative;
+    right: 287px;
+    align-items: center;
+
 }
 
 .navlist {
@@ -60,6 +72,7 @@ body {
 #btn {
     float: right;
     margin-right: 20px;
+    margin-bottom: 3px;
     padding: 0;
     line-height: 38px;
 }
@@ -67,6 +80,7 @@ body {
 #clr {
     float: right;
     margin-right: 20px;
+    margin-bottom: 4px;
     padding: 0;
     line-height: 38px;
 }
@@ -77,18 +91,20 @@ body {
     flex: 0 1 28%;
     display: flex;
     margin: 2px;
+    margin-left: 30px;
     padding: 20px;
-    border: 1px solid #dadada;
+    border: 3px solid #dadada;
     border-radius: 33px;
     background-color: #fff;
 }
 
 .color.active {
-    border: 2px solid white;
+    border: 5px solid white;
 }
 
 .Colorlist {
     display: inline-block;
+    margin-left: 10px;
 }
 
 .color:hover {
@@ -101,7 +117,9 @@ body {
 
 #can {
     border: 2px solid black;
-    position: absolute;
+    position: relative;
+    bottom: 270px;
+    left: 160px;
     color: #fff;
     overflow: hidden;
     background-color: transparent;
