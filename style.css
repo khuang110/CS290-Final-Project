@@ -37,8 +37,13 @@ h3 {
 
 .navbar {
     font-size: 18px;
+    margin: 2px;
     line-height: 22px;
     border: solid;
+
+    display: flex;
+  	flex-direction: row;
+	  flex-wrap: wrap;
 
     border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
 }
@@ -51,7 +56,7 @@ h3 {
 }
 
 .navitem {
-    list-style-type: none;
+    list-style-type: none
 }
 
 a {
