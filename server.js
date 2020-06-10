@@ -31,6 +31,14 @@ app.get('/combiner.html', function(req, res, next) {
 });
 
 /*
+ * page for canvas drawing
+ */
+app.get('/canvas.html', function(req, res, next) {
+    // res.status(200);
+    res.status(200).sendFile(__dirname + "/canvas.html");
+});
+
+/*
  * 404 page
  */
 app.get('*', function(req, res, next) {
