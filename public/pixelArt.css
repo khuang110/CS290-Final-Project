@@ -3,14 +3,26 @@
     padding: 10px 20px;
     font-size: 30px;
     font-weight: 100;
-    background-color: #319df6;
+    background-color: black;
     color: #fff;
+    border-style: double;
+    border-width: 10px;
+
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
 }
 
 body {
     margin: 10px;
     padding: 0;
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Lucida Console', Courier, monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
 }
 
 .navbar {
@@ -55,10 +67,12 @@ h3 {
 .drawing-select-button{
   margin-left: 15px;
   background-color: #88ff88;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .drawing-select-button:hover{
   background-color: #44ff33;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -211,6 +225,11 @@ h3 {
 #choose-color-modal .modal-footer button {
   position: relative;
   top:185px;
+}
+
+a {
+    position: fixed;
+    bottom: 25px;
 }
 
 .modal-footer .modal-cancel-button{background-color: #ff7070;}
