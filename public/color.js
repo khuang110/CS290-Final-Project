@@ -1,7 +1,7 @@
 /*
  *   Change colors
  */
-var colors = ['white', 'black', 'pink', 'orange', 'red', 'yellow',
+var colors = ['black', 'pink', 'orange', 'red', 'yellow',
     'gray', 'violet', 'green', 'blue'
 ];
 
@@ -28,7 +28,16 @@ function se(col) {
 // set color
 function setColor(e) {
     var color = e.target;
+    console.log(color);
     se(color.style.backgroundColor);
-    color.clssName += ' active';
+    color.className += ' active';
 
+}
+
+// set eraser
+function setWhite() {
+    var color = document.getElementById('white');
+    console.log(color);
+    se('white');
+    color.className += ' active';
 }
