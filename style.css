@@ -49,14 +49,18 @@ h3 {
 }
 
 .navlist {
-    margin: 5px;
+    margin: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    text-align: center;
 }
 
 .navitem {
     list-style-type: none
+    text-decoration: underline;
+    margin: 10px;
 }
 
 a {
