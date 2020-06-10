@@ -6,21 +6,14 @@
     <link rel="stylesheet" href="./canvas.css">
 
     <script src="./canvas.js" charset="utf-8" defer></script>
-
     <script src="./radius.js" charset="utf-8" defer></script>
-
     <script src="./color.js" charset="utf-8" defer></script>
-
     <script src="./save.js" charset="utf-8" defer></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.runtime.js" defer></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.3/fabric.min.js" defer></script>
 </head>
 
 <body class="drawing-canvas">
     <header>
-        <h1 class="site-title">Drawing Site</h1>
+        <h1 class="site-title">Doodle Site</h1>
         <nav class="navbar">
             <ul class="navlist">
                 <li class="navitem">
@@ -41,9 +34,9 @@
     </header>
     <canvas id="can"></canvas>
     <div class="Colorlist" id="Color-list">
-        <div>Eraser</div>
-        <div class="color" id="white"></div>
-        <div>Choose Color</div>
+        <div class="colorName">Eraser</div>
+        <div class="color" id="white" style="background-color: white" onclick="setWhite()"></div>
+        <div class="colorName">Choose Color</div>
     </div>
     <a href="./index.html">Back to Homepage
     <!-- <img id="canvas-img"> -->
