@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Drawing site</title>
-
     <link rel="stylesheet" href="./canvas.css">
 
-    <script src="./canvas.js"charset="utf-8" defer></script>
+    <script src="./canvas.js" charset="utf-8" defer></script>
 
     <script src="./radius.js" charset="utf-8" defer></script>
 
@@ -15,6 +14,8 @@
     <script src="./save.js" charset="utf-8" defer></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.runtime.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.3/fabric.min.js" defer></script>
 </head>
 
 <body class="drawing-canvas">
@@ -23,11 +24,11 @@
         <nav class="navbar">
             <ul class="navlist">
                 <li class="navitem">
-                    <a id="download" download="image.png"><button type="button">Download</button></a>
+                    <input type="button" value="save" id="btn">
                 </li>
                 <li class="navitem">
                     <input type="button" value="clear" id="clr" onclick="erase()">
-                </li> 
+                </li>
                 <li class="navitem">
                     <div id="radiusControl">
                         Line Width: <span id="val">10</span>
@@ -39,15 +40,11 @@
         </nav>
     </header>
     <canvas id="can"></canvas>
-    
     <div class="Colorlist" id="Color-list">
+        <div>Eraser</div>
+        <div class="color" id="white"></div>
         <div>Choose Color</div>
     </div>
+    <a href="./index.html">Back to Homepage
     <!-- <img id="canvas-img"> -->
 </body>
-
-   <!--<form action='#' onsubmit="return false;">
-      <input type='file' id='imgfile' />
-      <input type='button' id='btnLoad' value='Load' onclick='saveImage();' />
-    </form>
-    <canvas id="canvas"></canvas> {% endcomment %}>

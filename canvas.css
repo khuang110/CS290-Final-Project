@@ -34,7 +34,7 @@ h1 {
     background-color: gray;
     font-size: 18px;
     position: relative;
-    right: 287px;
+    right: 305px;
     align-items: center;
 
 }
@@ -136,4 +136,9 @@ h1 {
 select {
     font-size: 12px;
     background-color: #fff;
+}
+
+a {
+  position: fixed;
+  bottom: 10px;
 }
