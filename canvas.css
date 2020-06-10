@@ -30,13 +30,17 @@ h1 {
 }
 
 .Colorlist {
-    background-color: gray;
     font-size: 18px;
     right: 305px;
     align-items: center;
     /* position: relative; */
     /* added float right */
     float: right;
+}
+
+.colorName {
+    color: white;
+    text-align: center;
 }
 
 .navlist {
@@ -117,7 +121,9 @@ h1 {
 #can {
     border: 2px solid black;
     bottom: 270px;
+    padding-top: 5px;
     left: 160px;
+    margin-top: 3px;
     color: #fff;
     overflow: hidden;
     /* position: relative; */
