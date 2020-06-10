@@ -227,6 +227,11 @@ h3 {
   top:185px;
 }
 
+a {
+    position: fixed;
+    bottom: 25px;
+}
+
 .modal-footer .modal-cancel-button{background-color: #ff7070;}
 .modal-footer .modal-cancel-button:hover {background-color: #f04f41;}
 
