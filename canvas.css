@@ -5,10 +5,8 @@
     font-weight: 100;
     background-color: black;
     color: white;
-
     border-style: double;
     border-width: 10px;
-
     border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
 }
 
@@ -21,22 +19,23 @@ body {
 h1 {
     text-align: center;
 }
+
 .navbar {
     background-color: gray;
     font-size: 18px;
     line-height: 22px;
     position: relative;
     align-items: bottom;
-
 }
 
 .Colorlist {
     background-color: gray;
     font-size: 18px;
-    position: relative;
     right: 305px;
     align-items: center;
-
+    /* position: relative; */
+    /* added float right */
+    float: right;
 }
 
 .navlist {
@@ -117,11 +116,11 @@ h1 {
 
 #can {
     border: 2px solid black;
-    position: relative;
     bottom: 270px;
     left: 160px;
     color: #fff;
     overflow: hidden;
+    /* position: relative; */
     background-color: transparent;
 }
 
@@ -139,6 +138,6 @@ select {
 }
 
 a {
-  position: fixed;
-  bottom: 10px;
+    position: fixed;
+    bottom: 10px;
 }

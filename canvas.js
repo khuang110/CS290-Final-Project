@@ -38,10 +38,6 @@ function erase() {
     }
 }
 
-function save() {
-
-}
-
 var click = function(e) {
     dragging = true;
     putPoint(e);
