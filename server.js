@@ -11,6 +11,11 @@ app.get('/', function(req, res, next) {
     res.status(200).sendFile(__dirname + "/public/index.html");
 });
 
+app.get('/pixelArt.html', function(req, res, next) {
+    // res.status(200);
+    res.status(200).sendFile(__dirname + "/public/index.html");
+});
+
 app.get('*', function(req, res, next) {
     // res.status(200);
     res.status(404).sendFile(__dirname + "/public/404.html");
