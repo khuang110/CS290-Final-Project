@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset = "utf-8">
+
+  <title>Mouse Paint Website</title>
+
+
+     <!-- This 3rd-party stylesheet incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" crossorigin="anonymous">
+
+  <script src="./pixelArt.js" charset="utf-8" defer> </script>
+  <link rel = "stylesheet" href = "./pixelArt.css" media = "screen">
+</head>
+
+<body>
+  <header>
+     <h1 class="site-title">Pixel Art</h1>
+     <nav class="navbar"></nav>
+ </header>
+  <h3>Click on the button to start drawing!</h3>
+  <div class = "oldDrawings">
+  <h3>Your Master Pieces: </h3>
+  <button type = "button" class = "drawing-select-button">Open Drawing</button>
+  </div>
+
+
+  <button type="button" id="create-drawing-button"><i class="fas fa-paint-brush"></i></button>
+
+      <div id="modal-backdrop" class="hidden"></div>
+
+      <div id="choose-color-modal" class="hidden default-modal">
+        <div class="modal-dialog">
+
+          <div class="modal-header">
+            <h3>Make Some Pixel Art! What Color Would You Like?</h3>
+            <button type="button" class="modal-close-button">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <button type="button" class="color-choice-button red" id="#ff0000">Red</button>
+            <button type="button" class="color-choice-button orange" id="#ffa500">Orange</button>
+            <button type="button" class="color-choice-button yellow" id="#ffff00">Yellow</button>
+            <button type="button" class="color-choice-button green" id="#008000">Green</button>
+            <button type="button" class="color-choice-button blue" id="#0000ff">Blue</button>
+            <button type="button" class="color-choice-button indigo" id="#4b0082">Indigo</button>
+            <button type="button" class="color-choice-button violet" id="#ee82ee">Violet</button>
+            <button type="button" class="color-choice-button eraser" id="#eeeeee">Eraser</button>
+            <button type="button" class="color-choice-button custom" id="#eeeeee">
+              <label for="customColor">#</label>
+              <input type="text" id = "customColor" placeholder="Enter Your Own Color">
+            </button>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="modal-confirm-button">Confirm Color</button>
+
+            <button type="button" class="modal-cancel-button">Discard Drawing</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="drawing-modal" class="hidden default-modal">
+        <div class="modal-dialog">
+
+          <div class="modal-header">
+            <h3>Mouse over the whiteboard to start drawing!</h3>
+            <button type="button" class="modal-close-button">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+            <div class = "box-row">
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+              <div class ="box"></div>
+            </div>
+
+
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="modal-rechoose-button">Choose another color</button>
+            <button type="button" class="modal-accept-button">Finish Drawing</button>
+          </div>
+
+        </div>
+      </div>
+
+  </body>
+
+</html>
